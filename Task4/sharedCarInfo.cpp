@@ -1,0 +1,1 @@
+int sharedNrOfCars = 0;
