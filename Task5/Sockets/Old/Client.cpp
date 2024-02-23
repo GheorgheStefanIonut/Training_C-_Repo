@@ -7,7 +7,7 @@
 int main() {
     // Create socket
     int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
-    if (clientSocket < 0) {
+    if (clientSocket == -1) {
         std::cerr << "Error: Failed to create socket\n";
         return 1;
     }
@@ -30,7 +30,7 @@ int main() {
     // Print modified value to file
     std::ofstream outputFile("client_output.txt");
     if (outputFile.is_open()) {
-        outputFile << "Client modified value: " << modifiedValue << std::endl;
+        outputFile << "Modified value: " << modifiedValue << std::endl;
         outputFile.close();
     }
     else {

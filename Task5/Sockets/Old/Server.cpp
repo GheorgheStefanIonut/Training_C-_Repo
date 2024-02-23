@@ -12,12 +12,11 @@ int main() {
         return 1;
     }
 
-    // Initialize sockaddr_in structure for serverAddr
+    // Bind socket to address
     sockaddr_in serverAddr;
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(8080);
     serverAddr.sin_addr.s_addr = INADDR_ANY;
-	// Bind socket to address
     if (bind(serverSocket, (sockaddr*)&serverAddr, sizeof(serverAddr)) < 0) {
         std::cerr << "Error: Failed to bind socket\n";
         close(serverSocket);
@@ -43,12 +42,12 @@ int main() {
 
     // Modify shared value
     int sharedValue = 0;
-    sharedValue += 100;
+    sharedValue += 10;
 
     // Print modified value to file
     std::ofstream outputFile("server_output.txt");
     if (outputFile.is_open()) {
-        outputFile << "Server modified value: " << sharedValue << std::endl;
+        outputFile << "Modified value: " << sharedValue << std::endl;
         outputFile.close();
     }
     else {
