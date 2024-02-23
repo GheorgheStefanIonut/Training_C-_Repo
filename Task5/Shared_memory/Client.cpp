@@ -8,7 +8,7 @@ int main() {
     // Open shared memory
     int sharedMemoryFd = shm_open("/shared_memory", O_RDONLY, 0666);
     if (sharedMemoryFd < 0) {
-        std::cerr << "Error: Failed to open shared memory\n";
+        std::cerr << "Error: Failed to open shared memory again\n";
         return 1;
     }
     
