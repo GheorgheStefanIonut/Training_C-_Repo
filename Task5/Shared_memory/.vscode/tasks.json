@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile Server",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "Server.cpp",
+                "-o",
+                "Server",
+                "-lrt"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Compile Client",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "Client.cpp",
+                "-o",
+                "Client",
+                "-lrt"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run Server",
+            "type": "shell",
+            "command": "./Server"
+        },
+        {
+            "label": "Run Client",
+            "type": "shell",
+            "command": "./Client"
+        }
+    ]
+}
