@@ -33,6 +33,8 @@ int main() {
     // Join  threads
     thread1.join();
     thread2.join();
+	
+	std::cout << "Thread sync: " << sharedNrOfCars << std::endl;
 
     return 0;
 }
