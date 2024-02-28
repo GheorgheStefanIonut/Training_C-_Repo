@@ -1,0 +1,11 @@
+Thread 25076: Modified value is 1
+Thread 25076: Modified value is 2
+Thread 25076: Modified value is 3
+Thread 25076: Modified value is 4
+Thread 25076: Modified value is 5
+Thread 21084: Modified value is 6
+Thread 21084: Modified value is 7
+Thread 21084: Modified value is 8
+Thread 21084: Modified value is 9
+Thread 21084: Modified value is 10
+Thread sync: 10
