@@ -10,19 +10,18 @@ std::mutex mtx;
 
 // Task for the threads
 void task() {
+    for (int i = 0; i < 5; ++i) 
+{
+        // Lock mutex for exclusive access to sharedNrOfCars
+        std::lock_guard<std::mutex> lock(mtx);
 
-    // Lock mutex for exclusive access to sharedNrOfCars
-    mtx.lock();
+        int value = sharedNrOfCars;
+        value++;
+        std::cout << "Thread " << std::this_thread::get_id() << ": Modified value is " << value << std::endl;
 
-    int value = sharedNrOfCars;
-    value++;
-    std::cout << "Thread " << std::this_thread::get_id() << ": Modified value is " << value << std::endl;
-
-    // Update the extern variable
-    sharedNrOfCars = value;
-
-    // mutex unlock 
-    mtx.unlock();
+        // Update the extern variable
+        sharedNrOfCars = value;
+    }
 }
 
 int main() {
@@ -33,8 +32,8 @@ int main() {
     // Join  threads
     thread1.join();
     thread2.join();
-	
-	std::cout << "Thread sync: " << sharedNrOfCars << std::endl;
+
+    std::cout << "Thread sync: " << sharedNrOfCars << std::endl;
 
     return 0;
 }
