@@ -1,0 +1,3 @@
+/home/projectx/Desktop/TASK_8_FACTORY/build/CMakeFiles/rebuild_cache.dir
+/home/projectx/Desktop/TASK_8_FACTORY/build/CMakeFiles/edit_cache.dir
+/home/projectx/Desktop/TASK_8_FACTORY/build/CMakeFiles/Factory_test.dir

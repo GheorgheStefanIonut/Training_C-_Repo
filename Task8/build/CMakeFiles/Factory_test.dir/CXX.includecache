@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/projectx/Desktop/TASK_8_FACTORY/Factory.cpp
+iostream
+-
+memory
+-
+
+/home/projectx/Desktop/TASK_8_FACTORY/Factory_test.cpp
+boost/test/included/unit_test.hpp
+-
+Factory.cpp
+/home/projectx/Desktop/TASK_8_FACTORY/Factory.cpp
+
