@@ -1,69 +1,9 @@
-#include <iostream>
-
-// Interfata PanoramicRoof
-class PanoramicRoof {
-public:
-    virtual void installPanoramicRoof() = 0;
-};
-
-// Interfata AdaptiveHeadlights
-class AdaptiveHeadlights {
-public:
-    virtual void installAdaptiveHeadlights() = 0;
-};
-
-// Implementare PanoramicRoof pentru VW
-class VWPanoramicRoof : public PanoramicRoof {
-public:
-    void installPanoramicRoof() override {
-        std::cout << "Panoramic Roof installed for VW.\n";
-    }
-};
-
-// Implementare AdaptiveHeadlights pentru Audi
-class AudiAdaptiveHeadlights : public AdaptiveHeadlights {
-public:
-    void installAdaptiveHeadlights() override {
-        std::cout << "Adaptive Headlights installed for Audi.\n";
-    }
-};
-
-// Interfata CarAccessoriesFactory
-class CarAccessoriesFactory {
-public:
-    virtual PanoramicRoof* createPanoramicRoof() = 0;
-    virtual AdaptiveHeadlights* createAdaptiveHeadlights() = 0;
-};
-
-// Implementare CarAccessoriesFactory pentru VW
-class VWAccessoriesFactory : public CarAccessoriesFactory {
-public:
-    PanoramicRoof* createPanoramicRoof() override {
-        return new VWPanoramicRoof();
-    }
-
-    AdaptiveHeadlights* createAdaptiveHeadlights() override {
-        // Pentru VW, nu avem faruri adaptive, deci returnam nullptr
-        return nullptr;
-    }
-};
-
-// Implementare CarAccessoriesFactory pentru Audi
-class AudiAccessoriesFactory : public CarAccessoriesFactory {
-public:
-    PanoramicRoof* createPanoramicRoof() override {
-        // Pentru Audi, nu avem trapa panoramica, deci returnam nullptr
-        return nullptr;
-    }
-
-    AdaptiveHeadlights* createAdaptiveHeadlights() override {
-        return new AudiAdaptiveHeadlights();
-    }
-};
+#include "VWAccessoriesFactory.h"
+#include "AudiAccessoriesFactory.h"
 
 // Clientul care utilizeaza fabrica de accesorii auto pentru a instala si utiliza accesorii specifice
 int main() {
-    // Cream CarAccessoriesFactory pentru VW
+    // Cream o fabrica de accesorii auto concreta pentru VW
     CarAccessoriesFactory* vwAccessoriesFactory = new VWAccessoriesFactory();
 
     // Utilizam fabrica pentru a crea accesorii concrete
@@ -85,7 +25,7 @@ int main() {
     delete vwAdaptiveHeadlights;
     delete vwAccessoriesFactory;
 
-    // Cream CarAccessoriesFactory pentru Audi
+    // Cream o fabrica de accesorii auto concreta pentru Audi
     CarAccessoriesFactory* audiAccessoriesFactory = new AudiAccessoriesFactory();
 
     // Utilizam fabrica pentru a crea accesorii concrete
