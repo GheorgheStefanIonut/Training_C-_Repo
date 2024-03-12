@@ -1,0 +1,64 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/AdaptiveHeadlights.h
+iostream
+-
+
+../include/AudiAccessoriesFactory.h
+CarAccessoriesFactory.h
+../include/CarAccessoriesFactory.h
+AudiAdaptiveHeadlights.h
+../include/AudiAdaptiveHeadlights.h
+
+../include/AudiAdaptiveHeadlights.h
+AdaptiveHeadlights.h
+../include/AdaptiveHeadlights.h
+
+../include/CarAccessoriesFactory.h
+PanoramicRoof.h
+../include/PanoramicRoof.h
+AdaptiveHeadlights.h
+../include/AdaptiveHeadlights.h
+
+../include/PanoramicRoof.h
+iostream
+-
+
+../include/VWAccessoriesFactory.h
+CarAccessoriesFactory.h
+../include/CarAccessoriesFactory.h
+VWPanoramicRoof.h
+../include/VWPanoramicRoof.h
+
+../include/VWPanoramicRoof.h
+PanoramicRoof.h
+../include/PanoramicRoof.h
+
+/home/projectx/Desktop/Task 10/src/AbstractFactory.cpp
+VWAccessoriesFactory.h
+/home/projectx/Desktop/Task 10/src/VWAccessoriesFactory.h
+AudiAccessoriesFactory.h
+/home/projectx/Desktop/Task 10/src/AudiAccessoriesFactory.h
+
+/home/projectx/Desktop/Task 10/src/AudiAccessoriesFactory.cpp
+AudiAccessoriesFactory.h
+/home/projectx/Desktop/Task 10/src/AudiAccessoriesFactory.h
+
+/home/projectx/Desktop/Task 10/src/AudiAdaptiveHeadlights.cpp
+AudiAdaptiveHeadlights.h
+/home/projectx/Desktop/Task 10/src/AudiAdaptiveHeadlights.h
+
+/home/projectx/Desktop/Task 10/src/VWAccessoriesFactory.cpp
+VWAccessoriesFactory.h
+/home/projectx/Desktop/Task 10/src/VWAccessoriesFactory.h
+
+/home/projectx/Desktop/Task 10/src/VWPanoramicRoof.cpp
+VWPanoramicRoof.h
+/home/projectx/Desktop/Task 10/src/VWPanoramicRoof.h
+
