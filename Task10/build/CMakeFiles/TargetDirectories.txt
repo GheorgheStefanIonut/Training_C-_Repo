@@ -1,0 +1,3 @@
+/home/projectx/Desktop/Task 10/build/CMakeFiles/rebuild_cache.dir
+/home/projectx/Desktop/Task 10/build/CMakeFiles/edit_cache.dir
+/home/projectx/Desktop/Task 10/build/CMakeFiles/Abstract_Factory.dir
